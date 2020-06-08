@@ -1,75 +1,50 @@
+html {
+  font-size: 15px;
+}
+/*I don't fully understand this selector, but according to blog.prototypr.io it's necessary for the svg waves effect.*/
+*,*::before,*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
+  background-color: #f1f1f1;
+}
+
+@font-face {
+    font-family: 'glacial_indifferenceregular';
+    src: url('fonts/glacial-indifference.regular-webfont.woff2') format('woff2'),
+         url('fonts/glacial-indifference.regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .ribbon {
-  padding: 5px;
-  background: rgba(255, 255, 255, .5);
+  padding: 10px;
+  background:#91dbef;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
-/* Dropdown Button */
-.dropbtn {
-  background-color: gray;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
 nav {
-  display: none;
   width: 50%;
   justify-content: space-around;
 }
 
 nav a {
+  font-size: 1.3rem;
+  font-family: 'glacial_indifferenceregular', sans-serif;
   text-decoration: none;
-  color: black;
+  color: #0f2649;
 }
 
-.welcome {
-  background-image: url("images/desk.jpg");
-  /* Photo by JESHOOTS.COM on Unsplash */
-  background-size: cover;
+nav a:hover {
+  color: #f1f1f1;
+}
+
+#welcome {
+  background-color: #f1f1f1;
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
@@ -78,12 +53,47 @@ nav a {
   justify-content: center;
 }
 
-h1,
-h2 {
-  color: white;
-  /* margin: 0; */
+#portfolio {
+  background-color: #91dbef;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-around;
+  grid-gap: 20px 20px;
 }
 
+.project-tile {
+  width: 300px;
+  height: 100px;
+}
+
+#portfolio > svg {
+  display: block;
+}
+
+#services {
+
+}
+
+#about {
+  background-color: #91dbef;
+}
+
+#contact {
+
+}
+
+h1,
+h2,
+p {
+  font-family: 'glacial_indifferenceregular', sans-serif;
+  color: #0f2649;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
 @media only screen and (min-width: 500px) {
   nav {
     display: flex;
