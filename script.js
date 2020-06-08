@@ -31,7 +31,7 @@ $(() => {
     projects.forEach((project, index) => {
       let imgUrl = "url('" + projects[index].image + "')";
       let $div = 
-      $('#portfolio').append($('<div>').addClass('project-tile').css("background-image", imgUrl))
+      $('#project-wrapper').append($('<div>').addClass('project-tile').attr("id", `tile-${index}`).css("background-image", imgUrl))
     })
 
   }
