@@ -1,10 +1,6 @@
 html {
   font-size: 15px;
 }
-/*I don't fully understand this selector, but according to blog.prototypr.io it's necessary for the svg waves effect.*/
-*,*::before,*::after {
-  box-sizing: inherit;
-}
 
 body {
   margin: 0;
