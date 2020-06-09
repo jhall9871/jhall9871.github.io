@@ -9,6 +9,8 @@ html {
 body {
   margin: 0;
   background-color: #f1f1f1;
+  font-family: 'glacial_indifferenceregular', sans-serif;
+  color: #0f2649;
 }
 
 @font-face {
@@ -26,25 +28,48 @@ body {
   padding: 10px;
   background:#91dbef;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #f1f1f1;
 }
 
+.hamburger {
+
+}
+
 nav {
+  display: none;
   width: 50%;
   justify-content: space-around;
 }
 
-nav a {
+a {
   font-size: 1.3rem;
   font-family: 'glacial_indifferenceregular', sans-serif;
   text-decoration: none;
   color: #0f2649;
 }
 
-nav a:hover {
+a:hover {
   color: #f1f1f1;
+}
+
+#mobile-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  width: 100%;
+}
+
+.dropdown {
+  width: 100%;
+  height: 60px;
+  background-color: #91dbef;
+  border: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }
 
 section {
@@ -61,14 +86,19 @@ section {
   justify-content: center;
 }
 
+#welcome > img {
+  width: 100%;
+  height: auto;
+}
+
 #portfolio {
   background-color: #91dbef;
 }
 
 #project-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: repeat(6, 200px);
   grid-gap: 1rem;
   grid-auto-flow: dense;
   margin: 5px;
@@ -101,13 +131,6 @@ section {
 
 }
 
-h1,
-h2,
-p {
-  font-family: 'glacial_indifferenceregular', sans-serif;
-  color: #0f2649;
-}
-
 h1 {
   text-align: center;
   font-size: 2rem;
@@ -123,11 +146,32 @@ label, input {
 display: block;
 }
 
-@media only screen and (min-width: 500px) {
+/* Different nav style for small screens */
+
+/* Fix the image to full size if screen larger than 453px */
+@media only screen and (min-width: 453px) {
   nav {
     display: flex;
   }
-  .dropbtn {
+  .hamburger {
     visibility: hidden;
+  }
+  #mobile-menu {
+    display: none;
+  }
+  #welcome > img {
+    width: 453px;
+    height: 277px;
+  }
+  .ribbon {
+    display: flex;
+  }
+  #project-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 1rem;
+    grid-auto-flow: dense;
+    margin: 5px;
   }
 }

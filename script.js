@@ -23,16 +23,19 @@ $(() => {
   });
   //this function is called from within the ajax method so that it has access to the projects variable. All the stuff you want to do should be in here.
   function app(projects) {
-    // for (let i = 0; i < projects.length; i++) {
-    //   let imgUrl = "url('" + projects[i].image + "')";
-    //   $("#" + i).css("background-image", imgUrl);
-    // }
-
     projects.forEach((project, index) => {
       let imgUrl = "url('" + projects[index].image + "')";
-      let $div = 
-      $('#project-wrapper').append($('<div>').addClass('project-tile').attr("id", `tile-${index}`).css("background-image", imgUrl))
-    })
-
+      let $div = $("#project-wrapper").append(
+        $("<div>")
+          .addClass("project-tile")
+          .attr("id", `tile-${index}`)
+          .css("background-image", imgUrl)
+      );
+    });
   }
+
+  //this is to handle the hamburger dropdown
+  $(".hamburger").click(function () {
+    $("#mobile-menu").toggle("fast", "swing");
+  });
 });

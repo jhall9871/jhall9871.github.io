@@ -14,6 +14,13 @@
   </head>
   <body>
     <div class="ribbon">
+      <div class="hamburger">
+        <svg viewBox="0 0 100 80" width="40" height="40">
+          <rect width="100" height="20"></rect>
+          <rect y="30" width="100" height="20"></rect>
+          <rect y="60" width="100" height="20"></rect>
+        </svg>
+      </div>
       <nav>
         <a href="#">Home</a>
         <a href="#portfolio">Portfolio</a>
@@ -22,9 +29,16 @@
         <a href="#contact">Contact</a>
       </nav>
     </div>
+    <div id="mobile-menu">
+      <div class="dropdown"><a href="#">Home</a></div>
+      <div class="dropdown"><a href="#portfolio">Portfolio</a></div>
+      <div class="dropdown"><a href="#services">Services</a></div>
+      <div class="dropdown"><a href="#about">About</a></div>
+      <div class="dropdown"><a href="#contact">Contact</a></div>
+    </div>
     <section id="welcome">
       <img
-        src="images/jhselogobig.png"
+        src="images/jhselogobig2.png"
         alt="James Hall Software Engineer Logo"
       />
     </section>
@@ -72,12 +86,22 @@
       <div class="form-container">
         <form action="#">
           <label for="first">First Name</label>
-          <input type="text" name="firstname" id="first" placeholder="Your first name">
+          <input
+            type="text"
+            name="firstname"
+            id="first"
+            placeholder="Your first name"
+          />
           <label for="last">Last Name</label>
-          <input type="text" name="lastname" id="last" placeholder="Your last name">
+          <input
+            type="text"
+            name="lastname"
+            id="last"
+            placeholder="Your last name"
+          />
           <label for="message">Message</label>
           <textarea name="message" id="message" cols="30" rows="10"></textarea>
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" />
         </form>
       </div>
     </section>
