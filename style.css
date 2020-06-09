@@ -5,16 +5,16 @@ html {
 body {
   margin: 0;
   background-color: #f1f1f1;
-  font-family: 'glacial_indifferenceregular', sans-serif;
+  font-family: "glacial_indifferenceregular", sans-serif;
   color: #0f2649;
 }
 
 @font-face {
-    font-family: 'glacial_indifferenceregular';
-    src: url('fonts/glacial-indifference.regular-webfont.woff2') format('woff2'),
-         url('fonts/glacial-indifference.regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "glacial_indifferenceregular";
+  src: url("fonts/glacial-indifference.regular-webfont.woff2") format("woff2"),
+    url("fonts/glacial-indifference.regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .ribbon {
@@ -22,7 +22,7 @@ body {
   margin: 0px;
   width: 100%;
   padding: 10px;
-  background:#91dbef;
+  background: #91dbef;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +30,6 @@ body {
 }
 
 .hamburger {
-
 }
 
 nav {
@@ -39,9 +38,14 @@ nav {
   justify-content: space-around;
 }
 
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
 a {
   font-size: 1.3rem;
-  font-family: 'glacial_indifferenceregular', sans-serif;
+  font-family: "glacial_indifferenceregular", sans-serif;
   text-decoration: none;
   color: #0f2649;
 }
@@ -116,21 +120,42 @@ section {
 }
 
 #services {
+  position: relative;
+  overflow: hidden;
+}
 
+#services video {
+  float: right;
+  width: 100%;
+  display: block;
+  filter: grayscale(100%);
+}
+
+.overlay {
+  position: absolute;
+  float: left;
+  width: 100%;
+  min-height: 300px;
+  background: radial-gradient(ellipse at right, rgba(241,241,241,0.8) 40%, rgba(241,241,241,1) 60%);
+  z-index: 30000;
 }
 
 #about {
   background-color: #91dbef;
 }
 
-#contact {
-
-}
-
-h1 {
-  text-align: center;
+.dropcaps {
+  float: left;
   font-size: 2rem;
+  margin-bottom: -17px;
+  margin-right: 5px;
+  padding-bottom: 0;
 }
+
+#contact {
+}
+
+
 
 .form-container {
   display: flex;
@@ -138,8 +163,9 @@ h1 {
   align-items: center;
 }
 
-label, input {
-display: block;
+label,
+input {
+  display: block;
 }
 
 /* Different nav style for small screens */
