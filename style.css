@@ -21,26 +21,33 @@ body {
   position: fixed;
   margin: 0px;
   width: 100%;
-  padding: 10px;
+  height: 60px;
+  padding: 0px 10px;
   background: #91dbef;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #f1f1f1;
+  z-index: 500;
 }
 
 .hamburger {
+  display: flex;
+  align-items: center;
+  z-index: 600;
 }
 
 nav {
   display: none;
-  width: 50%;
+  width: 70%;
   justify-content: space-around;
 }
 
 h1 {
   text-align: center;
   font-size: 2rem;
+  line-height: 2rem;
+  position: relative;
 }
 
 a {
@@ -59,6 +66,7 @@ a:hover {
   position: fixed;
   top: 60px;
   width: 100%;
+  z-index: 500;
 }
 
 .dropdown {
@@ -73,7 +81,8 @@ a:hover {
 }
 
 section {
-
+overflow: auto;
+padding: 0px 10px 10px 10px;
 }
 
 #welcome {
@@ -92,7 +101,8 @@ section {
 }
 
 #portfolio {
-  background-color: #91dbef;
+  background-color: #1e4684;
+  color: #f1f1f1;
 }
 
 #project-wrapper {
@@ -101,7 +111,6 @@ section {
   grid-template-rows: repeat(6, 200px);
   grid-gap: 1rem;
   grid-auto-flow: dense;
-  margin: 5px;
 }
 
 .project-tile {
@@ -115,33 +124,51 @@ section {
   grid-row: span 2;
 }
 
-#portfolio > svg {
-  display: block;
+svg {
+  position: absolute;
+  z-index: 300;
 }
 
 #services {
   position: relative;
+  height: 300px;
   overflow: hidden;
+  padding: 0;
 }
 
 #services video {
-  float: right;
   width: 100%;
+  height: auto;
+  position: absolute;
+  /* top: -20px; */
+  bottom: -20px;
   display: block;
   filter: grayscale(100%);
+  z-index: -100;
 }
 
 .overlay {
   position: absolute;
-  float: left;
   width: 100%;
-  min-height: 300px;
-  background: radial-gradient(ellipse at right, rgba(241,241,241,0.8) 40%, rgba(241,241,241,1) 60%);
-  z-index: 30000;
+  height: 100%;
+  background: rgba(255,255,255, 0.8);
+  z-index: 0;
+}
+
+.overlay-text{
+  position: absolute;
+  width: 100%;
+  top: 20%;
+}
+
+.overlay-text ul {
+  margin-left: 30%
 }
 
 #about {
   background-color: #91dbef;
+  padding-left: 11%;
+  padding-right: 11%;
 }
 
 .dropcaps {
@@ -152,21 +179,25 @@ section {
   padding-bottom: 0;
 }
 
-#contact {
-}
-
-
-
 .form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-label,
-input {
-  display: block;
+form {
+  width: 80%;
+  
 }
+
+label,
+input,
+textarea {
+  display: block;
+  font-size: 1rem;
+  width: 100%;
+}
+
 
 /* Different nav style for small screens */
 
@@ -194,6 +225,5 @@ input {
     grid-template-rows: repeat(3, 200px);
     grid-gap: 1rem;
     grid-auto-flow: dense;
-    margin: 5px;
   }
 }

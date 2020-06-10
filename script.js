@@ -1,5 +1,5 @@
 $(() => {
-  console.log("app.js", $);
+  // console.log("app.js", $);
 
   let $div = $("div");
 
@@ -9,7 +9,7 @@ $(() => {
     "https://spreadsheets.google.com/feeds/list/1N0Lh8_H1klacQsz1raOYf-k9fTBUUEsk1rrIgE8Spos/od6/public/values?alt=json";
 
   $.ajax({ url: sheetAsJSON }).then((data) => {
-    console.log("data", data);
+    // console.log("data", data);
 
     let projects = data.feed.entry.map((project) => {
       return {
@@ -36,6 +36,34 @@ $(() => {
 
   //this is to handle the hamburger dropdown
   $(".hamburger").click(function () {
-    $("#mobile-menu").toggle("fast", "swing");
+    $("#mobile-menu").toggle("fast", "linear");
   });
+
+//window resize? collapse and remove hamburger
+  $(window).on('resize', () => {
+    if (window.innerWidth > 453) {
+      $("#mobile-menu").css('display', 'none');
+    }
+  })
+
+  //jQuery form validation
+  $("#contactForm").validate({
+    rules: {
+      firstname: {
+        required: true,
+        minlength: 3
+      },
+      lastname: {
+        required: true,
+        minlength: 3
+      },
+      email: {
+        required: true
+      },
+      message: {
+        required: true
+      }
+    }
+  });
+
 });
