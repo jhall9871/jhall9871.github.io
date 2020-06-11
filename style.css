@@ -113,7 +113,7 @@ padding: 0px 10px 10px 10px;
 #project-wrapper {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .project-tile {
@@ -121,8 +121,8 @@ padding: 0px 10px 10px 10px;
   background-size: cover;
   background-repeat: no-repeat;
   border: 1px solid #f1f1f1;
-  min-width: 100px;
-  min-height: 100px;
+  min-width: 150px;
+  min-height: 150px;
   border-radius: 5px;
 }
 

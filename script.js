@@ -44,9 +44,6 @@ $(() => {
     });
   }
 
-  $(function () {
-    $(".project-tile").Lazy();
-  });
 
   //this is to handle the hamburger dropdown
   $(".hamburger").click(function () {
