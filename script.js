@@ -25,45 +25,58 @@ $(() => {
   function app(projects) {
     projects.forEach((project, index) => {
       let imgUrl = "url('" + projects[index].image + "')";
-      let $div = $("#project-wrapper").append(
-        $("<div>")
-          .addClass("project-tile")
-          .attr("id", `tile-${index}`)
-          .css("background-image", imgUrl)
+      let $a = $("#project-wrapper").append(
+        $("<a>")
+          .attr("href", projects[index].url)
+          .attr("target", "_blank")
+          .append(
+            $("<div>")
+              .addClass("project-tile")
+              .attr("id", `tile-${index}`)
+              .css("background-image", imgUrl)
+              .append(
+                $("<div>")
+                  .addClass("tile-overlay")
+                  .append(projects[index].title)
+              )
+          )
       );
     });
   }
+
+  $(function () {
+    $(".project-tile").Lazy();
+  });
 
   //this is to handle the hamburger dropdown
   $(".hamburger").click(function () {
     $("#mobile-menu").toggle("fast", "linear");
   });
 
-//window resize? collapse and remove hamburger
-  $(window).on('resize', () => {
+  //window resize? collapse and remove hamburger
+  $(window).on("resize", () => {
     if (window.innerWidth > 453) {
-      $("#mobile-menu").css('display', 'none');
+      $("#mobile-menu").css("display", "none");
     }
-  })
+  });
 
   //jQuery form validation
   $("#contactForm").validate({
     rules: {
       firstname: {
         required: true,
-        minlength: 3
+        minlength: 3,
       },
       lastname: {
         required: true,
-        minlength: 3
+        minlength: 3,
       },
       email: {
-        required: true
+        required: true,
       },
       message: {
-        required: true
-      }
-    }
+        required: true,
+      },
+    },
   });
-
 });

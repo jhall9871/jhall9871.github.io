@@ -101,25 +101,56 @@ padding: 0px 10px 10px 10px;
 }
 
 #portfolio {
+  overflow: hidden;
   background-color: #1e4684;
   color: #f1f1f1;
 }
 
+#portfolio a {
+  display: block;
+}
+
 #project-wrapper {
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
-  grid-template-rows: repeat(6, 200px);
   grid-gap: 1rem;
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .project-tile {
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 2px solid #f1f1f1;
+  border: 1px solid #f1f1f1;
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 5px;
 }
 
-#tile-0 {
+.tile-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(255,255,255, 0.7);
+  z-index: 100;
+  color: #0f2649;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 5%;
+  border-radius: 5px;
+  font-size: 1.4rem;
+}
+
+.tile-overlay:hover{
+  background-color: rgba(255,255,255, 0.3);
+  transition: all 0.3s;
+}
+
+
+#project-wrapper:first-child {
   grid-column: span 2;
   grid-row: span 2;
 }
@@ -137,32 +168,32 @@ svg {
 }
 
 #services video {
-  width: 100%;
-  height: auto;
   position: absolute;
-  /* top: -20px; */
-  bottom: -20px;
+  width: 160%;
   display: block;
   filter: grayscale(100%);
   z-index: -100;
+  transform: translateY(-50%);
+  top: 50%;
 }
 
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(255,255,255, 0.8);
+  background: rgba(255,255,255, 0.5);
   z-index: 0;
 }
 
 .overlay-text{
-  position: absolute;
-  width: 100%;
-  top: 20%;
+  position: relative;
+  width: 50%;
+  margin: 10% auto 0 auto;
+  z-index: 400;
 }
 
 .overlay-text ul {
-  margin-left: 30%
+  color: #0f2649;
 }
 
 #about {
@@ -170,6 +201,7 @@ svg {
   padding-left: 11%;
   padding-right: 11%;
 }
+
 
 .dropcaps {
   float: left;
@@ -219,11 +251,7 @@ textarea {
   .ribbon {
     display: flex;
   }
-  #project-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    grid-template-rows: repeat(3, 200px);
-    grid-gap: 1rem;
-    grid-auto-flow: dense;
+  #services video {
+    width: 100%;
   }
 }
