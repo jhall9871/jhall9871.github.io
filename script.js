@@ -38,7 +38,7 @@ $(() => {
               .append(
                 $("<div>")
                   .addClass("tile-overlay")
-                  .append(projects[index].title)
+                  .append(`<p>${projects[index].title}</p>`)
               )
           )
       );
