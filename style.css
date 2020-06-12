@@ -139,9 +139,6 @@ padding: 0px 10px 10px 10px;
 
 .tile-overlay {
   content: "";
-  /* position: absolute;
-  top: 0;
-  left: 0; */
   min-width: 150px;
   min-height: 150px;
   width: 100%;
@@ -206,6 +203,11 @@ svg {
 
 .overlay-text ul {
   color: #0f2649;
+}
+
+.services-container{
+  display: flex;
+  justify-content: center;
 }
 
 #about {
