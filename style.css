@@ -104,42 +104,54 @@ padding: 0px 10px 10px 10px;
   overflow: hidden;
   background-color: #1e4684;
   color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#portfolio a {
-  display: block;
-}
+
 
 #project-wrapper {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  width: 80%;
+}
+
+#project-wrapper > a {
+  display: block;
+  min-width: 150px;
+  min-height: 150px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
 }
 
 .project-tile {
-  position: relative;
+  display: block;
   background-size: cover;
-  background-repeat: no-repeat;
-  border: 1px solid #f1f1f1;
   min-width: 150px;
   min-height: 150px;
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
 }
 
 .tile-overlay {
   content: "";
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  left: 0;
-  width: 90%;
-  height: 90%;
+  left: 0; */
+  min-width: 150px;
+  min-height: 150px;
+  width: 100%;
+  height: 100%;
   background-color: rgba(255,255,255, 0.7);
   z-index: 100;
   color: #0f2649;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 5%;
   border-radius: 5px;
   font-size: 1.4rem;
 }
@@ -150,7 +162,7 @@ padding: 0px 10px 10px 10px;
 }
 
 
-#project-wrapper:first-child {
+#link-0 {
   grid-column: span 2;
   grid-row: span 2;
 }

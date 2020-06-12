@@ -29,6 +29,7 @@ $(() => {
         $("<a>")
           .attr("href", projects[index].url)
           .attr("target", "_blank")
+          .attr("id", `link-${index}`)
           .append(
             $("<div>")
               .addClass("project-tile")
