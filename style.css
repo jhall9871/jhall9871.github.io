@@ -81,9 +81,11 @@ a:hover {
 }
 
 section {
-overflow: auto;
-padding: 0px 10px 10px 10px;
+/* overflow: auto; */
+padding: 5px;
 }
+
+/*=================*/
 
 #welcome {
   background-color: #f1f1f1;
@@ -96,9 +98,16 @@ padding: 0px 10px 10px 10px;
 }
 
 #welcome > img {
-  width: 100%;
-  height: auto;
+height: 300px;
+width: 300px;
+/* max-height: 500px;
+max-width: 500px;
+width: auto;
+height: auto; */
+
 }
+
+/*=================*/
 
 #portfolio {
   overflow: hidden;
@@ -110,13 +119,12 @@ padding: 0px 10px 10px 10px;
   align-items: center;
 }
 
-
-
 #project-wrapper {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 3px;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  width: 80%;
+  width: 100%;
+  max-width: 700px;
 }
 
 #project-wrapper > a {
@@ -173,6 +181,8 @@ svg {
   z-index: 300;
 }
 
+/*=============================*/
+
 #services {
   position: relative;
   height: 300px;
@@ -200,8 +210,9 @@ svg {
 
 .overlay-text{
   position: relative;
-  width: 50%;
-  margin: 10% auto 0 auto;
+  width: 95%;
+  max-width: 700px;
+  margin: 0 auto;
   z-index: 400;
 }
 
@@ -210,42 +221,51 @@ svg {
 }
 
 .services-container{
+text-align: center;
+}
+
+.tech-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-#about {
-  background-color: #91dbef;
-  padding-left: 11%;
-  padding-right: 11%;
+.tech-item {
+  background: rgba(255,255,255, 0.5);
+  margin: 2px 5px;
+  padding: 3px;
+  border-radius: 3px;
 }
 
+/*=====================================*/
 
-.dropcaps {
+#about {
+  background-color: #91dbef;
+}
+
+.about-container {
+  width: 95%;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+/* .dropcaps {
   float: left;
   font-size: 2rem;
   margin-bottom: -17px;
   margin-right: 5px;
   padding-bottom: 0;
-}
+} */
 
-.form-container {
+/*=====================================*/
+
+#contact {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-form {
-  width: 80%;
-  
-}
-
-label,
-input,
-textarea {
-  display: block;
-  font-size: 1rem;
-  width: 100%;
+  justify-content: center;
+  font-size: 2rem;
 }
 
 
@@ -263,8 +283,8 @@ textarea {
     display: none;
   }
   #welcome > img {
-    width: 453px;
-    height: 277px;
+    width: 500px;
+    height: 500px;
   }
   .ribbon {
     display: flex;
@@ -272,4 +292,7 @@ textarea {
   #services video {
     width: 100%;
   }
+  section {
+    padding: 30px;
+    }
 }

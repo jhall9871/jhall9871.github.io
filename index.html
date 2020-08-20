@@ -33,7 +33,7 @@
       <nav>
         <a href="#">Home</a>
         <a href="#portfolio">Portfolio</a>
-        <a href="#services">Services</a>
+        <a href="#services">Skills/Tech</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -46,23 +46,20 @@
       <div class="dropdown"><a href="#contact">Contact</a></div>
     </div>
     <section id="welcome">
-      <img
-        src="images/jhselogobig2.png"
-        alt="James Hall Software Engineer Logo"
-      />
+      <img src="images/jhselogo.png" alt="James Hall Software Engineer Logo" />
     </section>
     <section id="portfolio">
       <h1>Portfolio</h1>
       <div id="project-wrapper"></div>
     </section>
     <section id="services">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#1e4684"
           fill-opacity="1"
           d="M0,320L48,288C96,256,192,192,288,165.3C384,139,480,149,576,133.3C672,117,768,75,864,85.3C960,96,1056,160,1152,160C1248,160,1344,96,1392,64L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
         ></path>
-      </svg>
+      </svg> -->
       <video
         playsinline
         autoplay
@@ -73,32 +70,50 @@
       ></video>
       <div class="overlay"></div>
       <div class="overlay-text">
-        <h1>Services</h1>
         <div class="services-container">
-          <div class="services-left">
-            <h2>Skills</h2>
-            <ul>
-              <li>Design</li>
-              <li>Front-end Development</li>
-              <li>Back-end Development</li>
-              <li>Accessibility</li>
-            </ul>
+          <h2>Technologies</h2>
+          <div class="tech-list">
+            <div class="tech-item"><i class="fab fa-html5"></i> HTML5</div>
+            <div class="tech-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+            <div class="tech-item">
+              <i class="fab fa-js"></i> JavaScript, jQuery
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-music"></i> Finale, Sibelius
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-headphones"></i> Logic Pro X, Pure Data
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-bootstrap"></i> Bootstrap
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-server"></i> Ruby, Rails, Node.js, MongoDB,
+              PostgreSQL
+            </div>
+            <div class="tech-item">
+              <i class="fab fa-github"></i> Git, Github
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-desktop"></i> MS Office & Office 365, Google Docs
+              & Sheets
+            </div>
+            <div class="tech-item">
+              <i class="fab fa-adobe"></i> Adobe Photoshop, GIMP
+            </div>
           </div>
-          <div class="services-right">
-            <h2>Technologies</h2>
-            <ul>
-              <li><i class="fab fa-html5"></i> HTML5</li>
-              <li><i class="fab fa-css3-alt"></i> CSS3</li>
-              <li><i class="fab fa-js"></i> JavaScript</li>
-              <li><i class="fas fa-music"></i> Finale, Sibelius</li>
-              <li><i class="fas fa-headphones"></i> Logic Pro X</li>
-              <li><i class="far fa-flag"></i> English, German</li>
-            </ul>
+
+          <h2>Skills</h2>
+          <div class="tech-list">
+            <div class="tech-item">Public Speaking</div>
+            <div class="tech-item"><i class="far fa-flag"></i> English, German</div>
+            <div class="tech-item">Finance/Investing</div>
           </div>
         </div>
       </div>
     </section>
     <section id="about">
+      <div class="about-container">
       <h1>About</h1>
 
       <p>
@@ -110,33 +125,12 @@
         uncompromising commitment to producing polished, professional products
         on a tight deadline.
       </p>
+    </div>
     </section>
     <section id="contact">
       <h1>Contact</h1>
-      <div class="form-container">
-        <form id="contactForm" action="" method="post">
-          <label for="first">First Name</label>
-          <input
-            type="text"
-            name="firstname"
-            id="first"
-            placeholder="Your first name"
-          />
-          <label for="last">Last Name</label>
-          <input
-            type="text"
-            name="lastname"
-            id="last"
-            placeholder="Your last name"
-          />
-          <label for="email">Email</label>
-          <input type="email" id="mail" name="mail" />
-          <label for="message">Message</label>
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
-          <span class="error"></span>
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
+      <div><i class="fas fa-envelope-square"></i> <a href="mailto:jhall9871@gmail.com">jhall9871@gmail.com</a></div>
+      <div><i class="fas fa-phone"></i><a href="tel:9087684255"> 908-768-4255</a></div>
     </section>
   </body>
 </html>
